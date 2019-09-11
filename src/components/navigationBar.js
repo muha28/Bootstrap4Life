@@ -17,9 +17,6 @@ const Styles = styled.div`
 
     .navbar-brand, .navbar-nav, .nav-link, .link{
         color: white;
-
-        &:hover{
-            color: red;
         }
     }
 `;
@@ -29,7 +26,8 @@ export default class NavigationBar extends Component {
         return (
             <Styles>
                 <NavBar expand="lg">
-                    <NavbarBrand><NavLink to="/">Bootstrap 4 Life</NavLink></NavbarBrand>
+                    <NavbarBrand>Bootstrap 4 Life</NavbarBrand>
+
                     <NavbarToggle aria-controls="basic-navbar-nav" />
                     <NavbarCollapse id="basic-navbar-nav">
                         <Nav className="ml-auto">
@@ -39,11 +37,6 @@ export default class NavigationBar extends Component {
                         </Nav>
                     </NavbarCollapse>
                 </NavBar>
-                <div className="content">
-                    <Route path='/' exact={true} component={Home} />
-                    <Route path='/about' component={About} />
-                    <Route path='/contact' component={Contact} />
-                </div>
             </Styles>
         );
     }

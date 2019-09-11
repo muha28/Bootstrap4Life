@@ -4,24 +4,27 @@ import styled from 'styled-components';
 import NavbarToggle from 'react-bootstrap/NavbarToggle';
 import NavbarCollapse from 'react-bootstrap/NavbarCollapse';
 import NavBar from 'react-bootstrap/Navbar';
-import { NavLink, Route, } from 'react-router-dom';
-import Home from './home';
-import About from './about';
-import Contact from './contact';
+import { NavLink } from 'react-router-dom';
+
 
 const Styles = styled.div`
     .navbar{
         background-color: #000000;
-        color: white;
     }
-    .navbar-brand, .navbar-nav, .nav-link, .link, {
+    .navbar-brand, .navbar-nav, .nav-link, .link {
         color: white;
-        margin: 10px;
         }
     .cor{
         color: white;
     }
+    .cor:hover{
+        color: white;
     }
+
+    .button{
+        margin: 0 10px;
+    }
+}
 `;
 
 export default class TesteNavBar extends Component {
@@ -37,7 +40,6 @@ export default class TesteNavBar extends Component {
                             <Button variant="outline-light"><NavItem><NavLink exact to="/about" >About</NavLink></NavItem></Button>
                             <Button variant="outline-light"><NavItem><NavLink exact to="/contact">Contact</NavLink></NavItem></Button>
                         </Nav>
-
                     </NavbarCollapse>
                 </NavBar>
             </Styles>
