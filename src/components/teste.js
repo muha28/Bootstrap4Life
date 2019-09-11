@@ -12,13 +12,14 @@ import Contact from './contact';
 const Styles = styled.div`
     .navbar{
         background-color: #000000;
+        color: white;
     }
     .navbar-brand, .navbar-nav, .nav-link, .link, {
         color: white;
         margin: 10px;
         }
-    .navbar-brand:hover{
-        color:white;
+    .cor{
+        color: white;
     }
     }
 `;
@@ -28,7 +29,7 @@ export default class TesteNavBar extends Component {
         return (
             <Styles>
                 <NavBar expand="lg">
-                    <NavbarBrand href="/">Bootstrap 4 Life</NavbarBrand>
+                    <NavbarBrand className="cor">Bootstrap 4 Life</NavbarBrand>
                     <NavbarToggle aria-controls="basic-navbar-nav" />
                     <NavbarCollapse id="basic-navbar-nav">
                         <Nav className="ml-auto">
@@ -39,11 +40,6 @@ export default class TesteNavBar extends Component {
 
                     </NavbarCollapse>
                 </NavBar>
-                        <div className="content">
-                            <Route path='/' exact={true} component={Home} />
-                            <Route path='/about' component={About} />
-                            <Route path='/contact' component={Contact} />
-                        </div>
             </Styles>
         );
     }
